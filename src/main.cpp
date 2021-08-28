@@ -40,13 +40,12 @@ void setup()
   Serial.println("Booting...");
   initDisplay() ? bootLog("Display", 1) : bootLog("Display", 0);
   initPins();
-  bootLog("Control", 1);
+  bootLog("Control", 0);
 
   delay(2000);
   d.fillScreen(BLACK);
   d.drawBitmap(3, 0, pong, 89, 24, GREEN);
   d.drawBitmap(10, 30, game, 75, 26, RED);
-  delay(2000);
   while (digitalRead(UP_BUTTON) == HIGH && digitalRead(DOWN_BUTTON) == HIGH)
   {
     delay(100);
@@ -292,7 +291,6 @@ void initPins()
 bool initDisplay()
 {
   d.begin();
-  d.setRotation(2);
   uint8_t errorCode = 0;
   uint8_t w, h;
   errorCode = d.getErrorCode();
