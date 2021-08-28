@@ -9,6 +9,6 @@
 #define __DC 16
 #define __rst 5
 
-SSD_13XX d = SSD_13XX(__CS, __DC, __rst);
+extern SSD_13XX d;
 
 #endif
