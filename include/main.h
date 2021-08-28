@@ -11,10 +11,14 @@ const String MenuItems[_numMenus] = {
     "Settings",
 };
 
-bool initDisplay();
-void home();
-void updateScreen();
-
+//Boot
 void bootLog(String message, int status);
+bool initDisplay();
+void initPins();
+
+//Pong game
+void drawCourt();
+void showScore();
+void gameOver();
 
 #endif
