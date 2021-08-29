@@ -1,8 +1,10 @@
-#ifndef _OBJECTS_H_
-#define _OBJECTS_H_
+#ifndef _GLOBAL_H_
+#define _GLOBAL_H_
 
-#include <Arduino.h>
 #include <display.h>
+#include <Arduino.h>
+
+extern const uint8_t dWidth, dHeight, dDrawWidth, dDrawHeight;
 
 void drawCourt();
 

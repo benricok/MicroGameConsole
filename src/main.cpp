@@ -20,6 +20,8 @@
 
 boolean booted = false;
 
+Pong pong;
+
 void setup()
 {
   Serial.begin(115200);
@@ -27,26 +29,24 @@ void setup()
   Serial.println("Booting...");
   initDisplay() ? bootLog("Display", 1) : bootLog("Display", 0);
   initPins();
-  bootLog("Control", 0);
+  delay(50);
+  bootLog("Control Buttons", 0);
+  delay(50);
+  bootLog("Wifi comms", 1);
+  delay(50);
+  bootLog("Loaded Games", 0);
+  delay(50);
+  bootLog("Bluetooth", 1);
 
   delay(2000);
-  d.fillScreen(BLACK);
-  d.drawBitmap(3, 0, pong, 89, 24, GREEN);
-  d.drawBitmap(10, 30, game, 75, 26, RED);
-  while (digitalRead(UP_BUTTON) == HIGH && digitalRead(DOWN_BUTTON) == HIGH)
-  {
-    delay(100);
-  }
 
-  d.fillScreen(BLACK);
-  drawCourt();
-
-  initPong();
+  pong.startPong(33, 20, 24, 8);
+  pong.loopPong();
 }
 
 void loop()
 {
-  loopPong();
+  pong.loopPong();
 }
 
 bool initDisplay()
@@ -106,7 +106,7 @@ bool initDisplay()
     }
   }
 
-  delay(1000);
+  delay(200);
   d.clearScreen();
   d.setCursor(0, 0);
   d.setTextColor(WHITE);
