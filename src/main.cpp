@@ -38,7 +38,7 @@ void setup()
   delay(50);
   bootLog("Bluetooth", 1);
 
-  delay(2000);
+  delay(1000);
 
   pong.startPong(33, 20, 24, 8);
   pong.loopPong();
