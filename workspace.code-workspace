@@ -2,10 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"name": "esp-HUBOS",
-			"path": "esp-HUBOS"
 		}
 	],
 	"settings": {}

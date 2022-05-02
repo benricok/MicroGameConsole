@@ -40,7 +40,7 @@ void setup()
 
   delay(1000);
 
-  pong.startPong(33, 20, 24, 8);
+  pong.startPong(27, 19, 24, 8);
   pong.loopPong();
 }
 
