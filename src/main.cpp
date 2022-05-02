@@ -28,7 +28,7 @@ void setup()
 
   Serial.println("Booting...");
   initDisplay() ? bootLog("Display", 1) : bootLog("Display", 0);
-  initPins();
+  initPins2();
   delay(50);
   bootLog("Control Buttons", 0); // Yet to implement bool fuction
   delay(50);
@@ -114,7 +114,7 @@ bool initDisplay()
   return false;
 }
 
-void initPins()
+void initPins2()
 {
   pinMode(UP_BUTTON, INPUT_PULLUP);
   pinMode(DOWN_BUTTON, INPUT_PULLUP);

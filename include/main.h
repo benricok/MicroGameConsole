@@ -32,6 +32,6 @@
 //Boot
 void bootLog(String message, int status);
 bool initDisplay();
-void initPins();
+void initPins2();
 
 #endif
