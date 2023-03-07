@@ -29,16 +29,8 @@ void setup()
   Serial.println("Booting...");
   initDisplay() ? bootLog("Display", 1) : bootLog("Display", 0);
   initPins2();
-  delay(50);
-  bootLog("Control Buttons", 0); // Yet to implement bool fuction
-  delay(50);
-  bootLog("Wifi comms", 1); // Yet to implement
-  delay(50);
-  bootLog("Loaded Games", 0); // Yet to implement
-  delay(50); 
-  bootLog("Bluetooth", 1); // Yet to implement
 
-  delay(1000);
+  delay(500);
 
   pong.startPong(27, 19, 24, 8);
   pong.loopPong();
