@@ -12,7 +12,7 @@
 //  GNU Affero General Public License for more details.
 //
 //  You should have received a copy of the GNU Affero General Public License
-//  along with this program.  If not, see <https://www.gnu.org/licenses/>
+//  along with this program. If not, see <https://www.gnu.org/licenses/>
 //
 // -----------------------------------------------------------------------------
 
@@ -27,11 +27,29 @@
 #include <pong.h>
 #include <global.h>
 
-#define _numMenus 3 //Home, Notifications, Settings
+#define _numMenus 2 // Launcher, Settings
+
+struct GAME 
+{
+    String name;
+    unsigned int id;
+};
+
+class GAMELIB 
+{
+public: 
+    enum {
+        PONG,
+        SNAKE
+    } games;
+    
+    String getGames();
+
+};
 
 //Boot
 void bootLog(String message, int status);
 bool initDisplay();
-void initPins2();
+void initButtons();
 
 #endif

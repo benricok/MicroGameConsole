@@ -28,11 +28,11 @@ void setup()
 
   Serial.println("Booting...");
   initDisplay() ? bootLog("Display", 1) : bootLog("Display", 0);
-  initPins2();
+  initButtons();
 
   delay(500);
 
-  pong.startPong(27, 19, 24, 8);
+  pong.startPong(27, 19, 24, 6);
   pong.loopPong();
 }
 
@@ -106,7 +106,7 @@ bool initDisplay()
   return false;
 }
 
-void initPins2()
+void initButtons()
 {
   pinMode(UP_BUTTON, INPUT_PULLUP);
   pinMode(DOWN_BUTTON, INPUT_PULLUP);

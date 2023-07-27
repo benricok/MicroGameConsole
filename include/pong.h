@@ -7,7 +7,7 @@
 #include <bitmap.h>
 #include <display.h>
 
-class Pong
+class Pong 
 {
 public:
     void loopPong();

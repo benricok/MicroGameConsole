@@ -11,8 +11,8 @@ void Pong::loopPong()
 
     if (resetBall)
     {
-        ball_x = random(40, 56);
-        ball_y = random(10, 54);
+        ball_x = random(44, 52);
+        ball_y = random(20, 44);
         do
         {
             ball_dir_x = random(-1, 2);
@@ -138,6 +138,7 @@ void Pong::showScore()
     d.print(String(PLAYER_SCORE));
 
     delay(2000);
+    player_y = cpu_y = 16;
     unsigned long start = millis();
 
     d.fillScreen(BLACK);
